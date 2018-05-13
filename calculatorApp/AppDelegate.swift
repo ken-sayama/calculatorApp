@@ -13,9 +13,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    lazy var viewController = ViewController()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        // Create the application window
+        self.window = UIWindow(frame: UIScreen.main.bounds)
         
+        // Set window visibility
+        self.window?.makeKeyAndVisible()
+        
+        // Set root view controller for window
+        self.window?.rootViewController = viewController
         
         return true
     }

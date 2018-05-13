@@ -12,7 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let mainView = MainView(frame: self.view.bounds)
+        mainView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        self.view.addSubview(mainView)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,4 +27,3 @@ class ViewController: UIViewController {
 
 
 }
-
